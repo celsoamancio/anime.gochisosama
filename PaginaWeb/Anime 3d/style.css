@@ -1,0 +1,108 @@
+/*Este trecho define um reset de estilos básico, removendo margens e preenchimentos padrão.*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*Define o corpo da página para ocupar a altura total da viewport (height: 100vh), centraliza o 
+conteúdo verticalmente e horizontalmente usando flexbox, e aplica um fundo gradiente azul.*/
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom,#199494,#83b2d9);
+}
+/*Configura a classe .container para exibir seus filhos em linha (horizontalmente).*/
+.container{
+    display: flex;
+}
+
+.card-box{
+    perspective: 200000px;
+    margin: 0 15px;
+}
+/*Define estilos para os cartões. Eles têm uma largura fixa e uma altura fixa, uma posição relativa, 
+uma imagem de fundo configurada para cobrir todo o cartão e uma transição de transformação de 1 segundo.*/
+.card-box .card{
+    width: 200px;
+    height: 290px;
+    /* border: 1px solid red; */
+    position: relative;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    transform-origin: center bottom;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+/*Define as imagens de fundo para cada cartão usando a pseudo-classe :nth-child. Os URLs das imagens 
+estão no formato 'One Piece.jpg', 'Jujutsu Kaisen.jpg', etc.*/
+.card-box:nth-child(1) .card{
+    background-image: url(One\ Piece.jpg);
+}
+
+.card-box:nth-child(2) .card{
+    background-image: url(Jujutsu\ Kaisen.jpg);
+}
+
+.card-box:nth-child(3) .card{
+    background-image: url(Tokyo\ Revengers.jpg);
+}
+/*Estiliza o texto que fica sobre os cartões. Ele é inicialmente rotacionado para ficar fora da visão.*/
+.card-box .title{
+    width: 100%;
+    height: 40px;
+    /* border: 1px solid red; */
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 290px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    transform-origin: center top;
+    transform: rotateX(-90deg);
+}
+/*Define as imagens de fundo (gradiente e imagem) para o texto de cada cartão.*/
+.card-box:nth-child(1) .title{
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),url('One\ Piece.jpg');
+}
+
+.card-box:nth-child(2) .title{
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),url('Jujutsu\ Kaisen.jpg');
+}
+
+.card-box:nth-child(3) .title{
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),url('Tokyo\ Revengers.jpg');
+}
+/*Cria um efeito de iluminação nos cartões usando pseudo-elemento ::before. Ele tem uma sombra externa 
+e uma sombra interna.*/
+.card-box .card::before{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 50px 50px rgba(0,0,0,0.1),
+    inset 0 0 250px 250px rgba(0,0,0,0.1);
+    position: absolute;
+    left: 0;
+    top: 10px;
+    transform-origin: center bottom;
+    transform: rotateX(95deg) translateZ(-50px) scale(0.75);
+    transition: 1s;
+}
+/*Quando o mouse passa sobre um cartão, ele rotaciona e se move para frente (translateZ) 
+para criar o efeito 3D. O pseudo-elemento ::before também é ajustado para dar a sensação 
+de iluminação diferente durante o hover.*/
+.card-box:hover .card{
+    transform: rotateX(75deg) translateZ(40px);
+}
+
+.card-box:hover .card::before{
+    box-shadow: 0 0 25px 25px rgba(0,0,0,0.3),
+    inset 0 0 250px 250px rgba(0,0,0,0.3);
+    transform: rotateX(-5deg) translateZ(-50px) scale(0.9);
+}

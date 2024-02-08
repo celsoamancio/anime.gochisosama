@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Este trecho define um reset de estilos básico. Remove margens e preenchimentos padrão, 
+e define o modelo de caixa como border-box, o que significa que as dimensões de um elemento incluem
+ a sua borda e preenchimento, mas não a margem.*/
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D8BFD8;
+}
+/*Define o corpo da página para ter pelo menos a altura total da viewport (min-height: 100vh), 
+centraliza o conteúdo verticalmente e horizontalmente usando flexbox, e define a cor de fundo 
+como um tom de rosa (#D8BFD8).*/
+.container ul{
+    list-style: none;
+    text-align: center;
+}
+
+.container li{
+    width: 420px;
+    height: 420px;
+    display: inline-block;
+    text-align: left;
+    position: relative;
+}
+/*Define uma lista sem marcadores (list-style: none;) e centraliza o texto na lista. 
+Os itens da lista  são configurados para ter um tamanho fixo de 420x420 pixels, 
+exibidos em linha e com posicionamento relativo.*/
+.container li img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    position: relative;
+    z-index: 10;
+    transition: transform 0.35s;
+}
+/*Estilos para as imagens dentro dos itens da lista. Elas ocupam 100% da largura e altura do contêiner,
+ são centralizadas e ajustadas para cobrir todo o contêiner (object-fit: cover). 
+ O efeito de transição (transition: transform 0.35s) é aplicado ao escalar a imagem.*/
+.container li .text{
+    width: 100%;
+    height: 100%;
+    background-color: #2c3f52;
+    color: #b7ccde;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 30px;
+    transform: scale(0.7);
+    opacity: 0;
+    transition: 0.35s;
+}
+/*Estilos para um contêiner de texto sobreposto à imagem. Ele é posicionado absolutamente sobre a imagem,
+inicialmente com escala reduzida e opacidade zero. O efeito de transição é aplicado para a escala 
+e a opacidade.*/
+
+.container li h3{
+    color: #fff;
+}
+
+.container li a{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2b80ae;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+/*Estilos para um link posicionado absolutamente no canto inferior direito de cada item. 
+Ele tem uma cor de fundo azul (#2b80ae), texto branco, e alguns estilos de espaçamento e borda.*/
+.container li:hover img{
+    transform: scale(0.45);
+    border-radius: 50%;
+    border: 15px solid rgba(255, 255, 255, 0.5);
+}
+
+.container li:hover .text{
+    transform: scale(1);
+    opacity: 1;
+}
+/*Quando um item da lista é hover, a imagem é escala para 45% do tamanho original, 
+recebe um efeito de borda arredondada e uma borda branca. O texto também recebe um 
+efeito de transição para escala total e opacidade total.*/
