@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.banner-container {
+    background: url('banner-background.jpg') center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.banner-content {
+    max-width: 600px;
+}
+
+.banner-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.banner-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.banner-content a {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.banner-content a:hover {
+    background-color: #e6b800;
+}
+
+.menu-container {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.menu-item {
+    margin-bottom: 20px;
+}
+
+.menu-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.menu-item p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.order-button {
+    margin-top: 30px;
+}
+
+.order-button button {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order-button button:hover {
+    background-color: #e6b800;
+}
