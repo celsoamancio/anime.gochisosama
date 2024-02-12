@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Bob donuts</title>
+    <title>Bob Donuts</title>
 </head>
 <body>
 
     <div class="banner-container">
         <div class="banner-content">
-            <h1>Donuts da Samara</h1>
+            <h1>Só o gold</h1>
             <p>Levando donuts frescos até você!</p>
             <a href="#menu">Ver Menu</a>
         </div>
@@ -20,17 +20,39 @@
         <h2>Cardápio</h2>
         <div class="menu-item">
             <img src="donut1.jpg" alt="Donut Sabor Chocolate">
-            <p>Donut Sabor Chocolate</p>
+            <div class="item-details">
+                <h3>Donut Sabor Chocolate</h3>
+                <p>Delicioso donut com cobertura de chocolate.</p>
+                <p class="price">R$ 3,50</p>
+            </div>
         </div>
         <div class="menu-item">
             <img src="donut2.jpg" alt="Donut de Baunilha">
-            <p>Donut de Baunilha</p>
+            <div class="item-details">
+                <h3>Donut de Baunilha</h3>
+                <p>Donut macio com sabor irresistível de baunilha.</p>
+                <p class="price">R$ 3,00</p>
+            </div>
         </div>
         <!-- Adicione mais itens ao menu conforme necessário -->
 
         <div class="order-button">
             <button onclick="alert('Faça seu pedido agora!')">Faça seu Pedido</button>
         </div>
+    </div>
+
+    <div id="products" class="products-container">
+        <h2>Nossos Produtos</h2>
+        <p>Conheça alguns dos nossos deliciosos donuts:</p>
+        <div class="product-item">
+            <img src="donut3.jpg" alt="Donut de Morango">
+            <h3>Donut de Morango</h3>
+        </div>
+        <div class="product-item">
+            <img src="donut4.jpg" alt="Donut de Pistache">
+            <h3>Donut de Pistache</h3>
+        </div>
+        <!-- Adicione mais produtos conforme necessário -->
     </div>
 
     <script src="script.js"></script>

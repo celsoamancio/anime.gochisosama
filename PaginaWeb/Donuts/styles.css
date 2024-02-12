@@ -78,3 +78,35 @@ body {
 .order-button button:hover {
     background-color: #e6b800;
 }
+
+/* Mantenha o código CSS anterior e adicione as seguintes modificações */
+
+.item-details {
+    margin-left: 15px;
+    text-align: left;
+}
+
+.item-details h3 {
+    margin-top: 0;
+}
+
+.price {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.products-container {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.product-item {
+    margin-bottom: 30px;
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
